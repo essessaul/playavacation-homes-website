@@ -1,0 +1,279 @@
+:root{
+  --ink:#24325d;
+  --muted:#5a6782;
+  --line:#e8e1d8;
+  --card:#ffffff;
+  --soft:#fbf7f2;
+  --accent:#f28a2d;
+  --accent-dark:#d96f12;
+  --sea:#eaf6f8;
+  --sand:#f7efe6;
+  --shadow:0 16px 40px rgba(36,50,93,.10);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:linear-gradient(180deg,#fff,#fffdf9)}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+input,textarea,select{
+  width:100%;
+  border:1px solid #ddd7cf;
+  border-radius:14px;
+  padding:.9rem 1rem;
+  background:#fff;
+}
+textarea{min-height:120px;resize:vertical}
+.container{width:min(1240px,calc(100% - 2rem));margin:0 auto}
+.section{padding:3rem 0}
+.page-shell{min-height:calc(100vh - 140px)}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  border:none;border-radius:14px;padding:.9rem 1.15rem;font-weight:800;
+}
+.btn-dark{background:linear-gradient(180deg,var(--accent),var(--accent-dark));color:#fff}
+.btn-light{background:#fff;color:var(--ink);border:1px solid #ddd7cf}
+.badge{
+  display:inline-flex;align-items:center;border-radius:999px;padding:.4rem .8rem;
+  font-size:.75rem;font-weight:800;background:#eef1f8;color:var(--ink)
+}
+.muted{color:var(--muted)}
+.site-header{
+  position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)
+}
+.site-header-inner,.footer-inner,.inline,.space,.nav-links,.header-actions,.price-row{
+  display:flex;align-items:center;gap:.9rem
+}
+.site-header-inner,.footer-inner,.space,.price-row{justify-content:space-between}
+.nav-links{gap:1.4rem;flex-wrap:wrap}
+.nav-links a.active{color:var(--accent);font-weight:800}
+.logo{height:64px;object-fit:contain}
+.hero{
+  position:relative;overflow:hidden;border-radius:28px;min-height:700px;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,.66) 40%, rgba(255,255,255,.16) 72%, rgba(255,255,255,.04)),
+    url('/hero-beach.jpg');
+  background-size:cover;
+  background-position:center center;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.hero-inner{padding:3rem;max-width:720px}
+.page-title{font-size:clamp(2.1rem,4vw,4.1rem);line-height:1.03;margin:.7rem 0 1rem;font-weight:900}
+.grid{display:grid;gap:1rem}
+.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.listing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.section-heading{max-width:900px;margin-bottom:1.4rem}
+.divider{width:120px;height:4px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#f7b57a);margin-top:.8rem}
+.search-box{background:rgba(248,242,235,.94);border:1px solid #ddd7cf;border-radius:22px;padding:1rem;margin-top:1.5rem}
+.search-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:.75rem}
+.property-card{padding:1.25rem}
+.property-card img{width:100%;height:220px;object-fit:cover;border-radius:18px}
+.listing-info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;margin-top:1rem}
+.info-pill{border:1px solid #eee3d8;background:linear-gradient(180deg,#fff,#faf6f1);border-radius:16px;padding:.75rem;text-align:center}
+.info-pill .label{font-size:12px;color:var(--muted);font-weight:700}
+.info-pill .value{font-size:16px;font-weight:800;margin-top:4px}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.65rem}
+.calendar-header,.calendar-day{text-align:center;padding:.85rem;border-radius:14px}
+.calendar-header{font-weight:800;color:var(--muted)}
+.calendar-day{border:none;background:#fff;border:1px solid var(--line)}
+.calendar-day.booked{background:#b6dce6;color:#22516b}
+.calendar-day.available{background:#fff}
+.calendar-day-range{background:#fff1df !important;color:#8b571e !important}
+.calendar-day-selected{outline:3px solid var(--accent);box-shadow:0 8px 18px rgba(242,138,45,.22)}
+.option-list{display:grid;gap:.7rem}
+.option-row{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  background:linear-gradient(180deg,#fff,#faf6f1);border:1px solid #eee3d8;border-radius:14px;padding:.8rem .9rem
+}
+.booking-summary{background:linear-gradient(180deg,#fff,#fcf7f2);border:1px solid #eee3d8;border-radius:18px;padding:1rem}
+.notice{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:1rem}
+.mascot-card{
+  display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.88);
+  border:1px solid rgba(236,229,221,.95);border-radius:22px;padding:.75rem .95rem;
+  box-shadow:0 10px 26px rgba(47,61,107,.08)
+}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:1rem;border-bottom:1px solid var(--line);text-align:left}
+.footer{border-top:1px solid var(--line);margin-top:2rem}
+.hidden-mobile{display:block}
+@media (max-width:980px){
+  .two-col,.three-col,.listing-grid,.search-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .site-header-inner,.footer-inner,.nav-links,.header-actions,.price-row,.space{flex-direction:column;align-items:flex-start}
+  .two-col,.three-col,.listing-grid,.search-grid,.listing-info-grid{grid-template-columns:1fr}
+  .hero{min-height:620px}
+  .hero-inner{padding:1.25rem}
+  .logo{height:52px}
+}
+
+.airbnb-calendar-wrap{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.airbnb-month-card{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:20px;
+  padding:1rem;
+}
+.airbnb-month-label{
+  text-align:center;
+  font-weight:900;
+  margin-bottom:.8rem;
+}
+.airbnb-weekdays,
+.airbnb-month-grid{
+  display:grid;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:.4rem;
+}
+.airbnb-weekday{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  font-weight:800;
+  padding:.4rem 0;
+}
+.airbnb-day-empty{
+  min-height:40px;
+}
+.airbnb-day{
+  min-height:42px;
+  border-radius:999px;
+  border:none;
+  font-weight:800;
+  background:#fff;
+}
+.airbnb-day.available:hover{
+  background:#f5efe8;
+}
+.airbnb-day.blocked{
+  background:#eef2f5;
+  color:#94a3b8;
+  text-decoration:line-through;
+  cursor:not-allowed;
+}
+.airbnb-day.in-range{
+  background:#fff1df;
+  color:#8b571e;
+  border-radius:10px;
+}
+.airbnb-day.selected{
+  background:var(--ink);
+  color:#fff;
+  outline:3px solid var(--accent);
+}
+@media (max-width:980px){
+  .airbnb-calendar-wrap{grid-template-columns:1fr;}
+}
+
+.airbnb-day.in-range{
+  background:#ffe7cc !important;
+  color:#8b571e !important;
+  border-radius:10px !important;
+}
+.airbnb-day.selected{
+  background:var(--ink) !important;
+  color:#fff !important;
+  outline:3px solid var(--accent);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:40px;
+  bottom:0;
+  width:420px;
+  height:520px;
+  background:url('/saul-hero.png') no-repeat bottom right;
+  background-size:contain;
+  pointer-events:none;
+}
+
+
+.interactive-mascot-button{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:94px;
+  height:94px;
+  border:none;
+  background:rgba(255,255,255,.92);
+  border-radius:999px;
+  box-shadow:0 14px 30px rgba(36,50,93,.22);
+  padding:6px;
+  z-index:90;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.interactive-mascot-button:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 18px 36px rgba(36,50,93,.28);
+}
+.interactive-mascot-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:999px;
+}
+.interactive-mascot-panel{
+  position:fixed;
+  right:18px;
+  bottom:124px;
+  width:280px;
+  background:rgba(255,255,255,.98);
+  border:1px solid #e8e1d8;
+  border-radius:22px;
+  box-shadow:0 18px 38px rgba(36,50,93,.16);
+  padding:1rem;
+  z-index:91;
+}
+.interactive-mascot-header{
+  font-weight:900;
+  color:var(--ink);
+  margin-bottom:.4rem;
+}
+.interactive-mascot-text{
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:.9rem;
+}
+.interactive-mascot-actions{
+  display:grid;
+  gap:.65rem;
+}
+.interactive-mascot-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.8rem 1rem;
+  border-radius:14px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-dark));
+  color:#fff;
+  font-weight:800;
+}
+@media (max-width:720px){
+  .interactive-mascot-button{
+    width:82px;
+    height:82px;
+    right:12px;
+    bottom:12px;
+  }
+  .interactive-mascot-panel{
+    right:12px;
+    left:12px;
+    width:auto;
+    bottom:102px;
+  }
+}
